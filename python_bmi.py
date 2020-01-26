@@ -1,3 +1,5 @@
+"""This python calculator calculates your BMI"""
+
 #set variables weight and height and collect user input
 weight = float(input("Enter your weight in kilograms: "))
 height = float(input("Enter your height in centimeters: "))
