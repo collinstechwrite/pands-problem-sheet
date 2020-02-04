@@ -1,5 +1,3 @@
-
-
 """
 This program asks the user to input any positive integer and outputs the successive values of the following calculation.
 At each step calculate the next value by taking the current value and,
@@ -19,10 +17,12 @@ def number_calculation(user_input):
             if user_input % 2 == 0: #checks to see if number is even
                 print(round(user_input,ndigits=None)) #prints current number removing decimal point so user can see flow of calculations
                 user_input = user_input / 2 #if number is even divides number by two
-            elif user_input % 2 != 0: #checks to see if number is odd
+
+            else: #by default if number is not even then else deals as an odd number
                 print(round(user_input,ndigits=None)) #prints current number removing decimal point so user can see flow of calculations
                 user_input = (user_input * 3) + 1 #if number is odd multiplies it by three and adds one.
-        print("1") #prints 1 on exiting the while loop
+  
+        print(round(user_input,ndigits=None)) #prints 1 on exiting the while loop
         play_again() #activates function play_again to offer user choice of whether they want to play again.
 
     except:
@@ -51,7 +51,7 @@ The program will continue to perform this calculation until it reaches value of 
 def play():
     """Help doc info for play, this function is the first function that the program loads and it performs checks on the users input data to insure that positive number is greater than 0"""
     try: 
-        user_input = int(input("Enter any whole number:"))   #ensures that program is looking for an integer  
+        user_input = int(input("Input any positive integer:"))   #int() ensures that program is looking for an integer  
         if user_input <= 0: #ensures user input is greater than zero
             print("You must write a positive number greater than zero:")
             play()
