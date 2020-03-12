@@ -1,34 +1,44 @@
-findsquareroot = input("input number you wish to find the square root of")
-abc = int(findsquareroot)
+def sqrt(findsquareroot):
+
+    """
+    My square root guess
+    this part of code is used to reduce iterations
+    """
+    
+    mysquarerootguesses = len(str(findsquareroot))
+
+    use="1"
+
+    for i in range(1,mysquarerootguesses):
+        if i == 1:
+            pass
+        else:
+            use = use + "0"
+
+    mysquarerootguess = float(use)
 
 
-"""
-My square root guess
-"""
+    print("my starting guess " , mysquarerootguess)
 
-mysquarerootguesses = len(str(abc))
-use="1"
+    if (mysquarerootguess ** 2) > findsquareroot:
+        mysquarerootguess = mysquarerootguess / 4
+    
 
-for i in range(1,mysquarerootguesses):
-    if i == 1:
-        pass
-    else:
-        use = use + "0"
+    while (mysquarerootguess  ** 2) < (findsquareroot-2):
+        mysquarerootguess += 1
+        print(mysquarerootguess)
+    print("beginning second while loop")
 
-
-
-mysquarerootguess = float(use)
+    while abs((findsquareroot-0.1)-mysquarerootguess) < 0.1:
+        mysquarerootguess += 0.01
+        print(mysquarerootguess)
 
 
-checkingapossible_squareroot = mysquarerootguess ** 2
 
-while checkingapossible_squareroot  < abc:
-    checkingapossible_squareroot = (mysquarerootguess + 0.01) ** 2
-    mysquarerootguess = mysquarerootguess + 0.01
-    print(mysquarerootguess)
-
-print(mysquarerootguess)
-print(mysquarerootguesses)
+findsquareroot = int(input("input number you wish to find the square root of"))
+print(sqrt(findsquareroot))
 
 
-print(use)
+
+
+
