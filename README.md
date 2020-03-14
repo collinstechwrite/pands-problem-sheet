@@ -18,3 +18,5 @@ Newtons_Theory, Squareroot, squareroot_maths_trick - are all my draft works to a
 
 Es - This is a program that reads in a text file and outputs the number of e's it contains. The program should take the filename from an argument on the command line.
 e.g. $ python es.py moby-dick.txt
+
+Week8_Plot_Homework - #f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4]
