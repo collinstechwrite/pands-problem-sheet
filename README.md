@@ -14,7 +14,7 @@ if it is even, divide it by two, but if it is odd, multiply it by three and add 
 
 WeekDay - weekday.py is a program that outputs whether or not today is a weekday.
 
-Newtons_Theory, Squareroot, squareroot_maths_trick - are all my draft works to approach calculating squareroot using python
+Squareroot - an approach to calculating squareroot using python
 
 Es - This is a program that reads in a text file and outputs the number of e's it contains. The program should take the filename from an argument on the command line.
 e.g. $ python es.py moby-dick.txt
